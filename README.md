@@ -1,6 +1,6 @@
 # 🏀 NBA Fantasy Points Predictor
 
-A full end-to-end machine learning pipeline that predicts NBA player fantasy points using live data from the [NBA API](https://github.com/swar/nba_api).  
+A complete end-to-end machine learning pipeline that predicts NBA player fantasy points using live data from the [NBA API](https://github.com/swar/nba_api).  
 Built with **Python**, **pandas**, **scikit-learn**, and **Streamlit**.
 
 ---
@@ -29,7 +29,7 @@ Step 1: Fetch Data
 Fetches all NBA boxscore data for the 2024–25 season using the NBA API.
 
 python src/data_fetch.py
-This saves a file like:
+Output:
 
 data/raw/boxscores_2024-25_Regular_Season.parquet
 Step 2: Build Features
@@ -58,15 +58,15 @@ Step 6: Run Streamlit App
 Launches the interactive dashboard.
 
 streamlit run app/streamlit_app.py
-📊 Streamlit App Features
+🖥️ Streamlit App Features
 Search and select any NBA player
 View predicted fantasy points for the next game
 See recent fantasy point trends
 Inspect latest feature values used for prediction
-🧩 Fantasy Points Formula
+📊 Fantasy Points Formula
 Fantasy points are computed as:
 
-Fantasy Points=PTS+1.2×REB+1.5×AST+3×STL+3×BLK−TOV
+Fantasy Points = PTS + 1.2×REB + 1.5×AST + 3×STL + 3×BLK − TOV
 
 🧪 Testing
 Run all tests:
@@ -88,5 +88,7 @@ Add model retraining automation
 👤 Author
 Bisayo Awude
 GitHub: @bibby-cs
-Email: bawude13@gmail.com
+
+📜 License
+This project is licensed under the MIT License.
 
