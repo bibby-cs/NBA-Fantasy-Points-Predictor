@@ -32,6 +32,7 @@ python src/data_fetch.py
 Output:
 
 data/raw/boxscores_2024-25_Regular_Season.parquet
+
 Step 2: Build Features
 Generates fantasy points and rolling averages for each player.
 
@@ -39,6 +40,7 @@ python src/features.py
 Output:
 
 data/processed/features_2024-25.parquet
+
 Step 3: Train Model
 Trains a Random Forest model to predict fantasy points.
 
@@ -46,23 +48,28 @@ python src/train.py
 Output:
 
 models/fantasy_model.pkl
+
 Step 4: Backtest
 Evaluates model performance on unseen data.
 
 python src/backtest.py
+
 Step 5: Explain Model
 Shows feature importances using permutation or SHAP values.
 
 python src/explain.py
+
 Step 6: Run Streamlit App
 Launches the interactive dashboard.
 
 streamlit run app/streamlit_app.py
+
 🖥️ Streamlit App Features
 Search and select any NBA player
 View predicted fantasy points for the next game
 See recent fantasy point trends
 Inspect latest feature values used for prediction
+
 📊 Fantasy Points Formula
 Fantasy points are computed as:
 
@@ -72,6 +79,7 @@ Fantasy Points = PTS + 1.2×REB + 1.5×AST + 3×STL + 3×BLK − TOV
 Run all tests:
 
 pytest
+
 🛠️ Technologies Used
 Python 3.9+
 pandas, numpy
@@ -80,11 +88,13 @@ streamlit
 nba_api
 joblib
 matplotlib
+
 🚀 Future Improvements
 Add live game updates
 Integrate player injury and lineup data
 Deploy app on Streamlit Cloud or AWS
 Add model retraining automation
+
 👤 Author
 Bisayo Awude
 GitHub: @bibby-cs
